@@ -1,0 +1,42 @@
+spring:
+  # mysql数据库配置
+  datasource:
+    url: jdbc:mysql://192.168.10.7:3306/CloudPile
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: CloudPile
+    password: DpnTxTpWwdJkDkbR
+  # redis配置
+  data:
+    redis:
+      host: 192.168.10.7
+      port: 6379
+      password: 123456
+  # 文件上传
+  servlet:
+    multipart:
+      max-file-size: 1024MB
+      max-request-size: 1024MB
+  # 邮箱配置使用outlook邮箱
+  mail:
+    host: smtp.163.com
+    port: 25
+    username: cloudPile@163.com
+    password: ZXkdb358xiEFAbQc
+
+# 日志
+logging:
+  level:
+    root: INFO
+    com.example.GiftNoteApplication: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+  file:
+    path: "./log/"
+    name: log.log
+
+# 文件上传目录
+file:
+  upload-path: C:\Users\htobs\IdeaProjects\CloudPilev-0.0.1\file
+
+server:
+  port: 4467
